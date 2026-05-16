@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC MAESTRO – ремонт и сборка ПК</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <img src="assets/logo.gif" alt="PC MAESTRO" class="logo-img"
+                    onerror="this.outerHTML='<span class=logo-text>PC MAESTRO</span>'">
+            </a>
+            <nav class="nav" id="mainNav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link" data-modal="about">О нас</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link" data-modal="services">Услуги</a></li>
+                    <li class="nav__item"><a href="#contract" class="nav__link" data-modal="contract">Договор</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link" data-modal="contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="burger" id="burgerBtn" aria-label="Меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">PC MAESTRO</h1>
+                <p class="hero__subtitle">Ремонт, сборка, апгрейд и обслуживание компьютеров. <br>Первичная диагностика
+                    – <strong>бесплатно</strong> (при заказе ремонта)</p>
+                <button class="btn open-modal" data-modal="contacts">Связаться с нами</button>
+
+                <div class="hero__features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved feature-icon"></i>
+                        <span>Гарантия</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck-fast feature-icon"></i>
+                        <span>Выезд</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-microchip feature-icon"></i>
+                        <span>Любые бренды</span>
+                    </div>
+                </div>
+
+                <div class="common-problems">
+                    <h2 class="common-problems__title">Типовые проблемы, с которыми мы работаем</h2>
+                    <div class="problems-grid">
+                        <div class="problem-card">
+                            <i class="fa-solid fa-power-off"></i>
+                            <span>Не включается</span>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-exclamation-triangle"></i>
+                            <span>Синий экран</span>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-tachograph-digital"></i>
+                            <span>Медленная работа</span>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-fan"></i>
+                            <span>Шум / перегрев</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <h2 class="section-title">Как мы работаем</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step__icon"><i class="fa-solid fa-phone"></i></div>
+                        <h3>Вы связываетесь с нами</h3>
+                        <p>Позвоните или напишите в Telegram. Опишите проблему — договоримся о времени.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>Диагностика</h3>
+                        <p>Выезжаем, проводим диагностику. Первичная — 100 ₽ (бесплатно при ремонте). Расширенная — по
+                            договорённости. Сразу озвучиваем, что с компьютером.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>Согласование и старт</h3>
+                        <p>Называем точную стоимость и сроки. Если вас всё устраивает, подписываем договор и приступаем
+                            к работе.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step__icon"><i class="fa-solid fa-check-circle"></i></div>
+                        <h3>Выдача компьютера</h3>
+                        <p>Финальное тестирование при вас, рекомендации по уходу. Гарантия действует с этого момента.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modalAbout">
+        <div class="modal">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <h2 class="section-title">О нас</h2>
+                <div class="team">
+                    <div class="team__member">
+                        <div class="team__photo">
+                            <img src="assets/фарит.jpg" alt="Фарит"
+                                onerror="this.style.display='none'; this.parentNode.querySelector('.photo-placeholder').style.display='flex'">
+                            <div class="photo-placeholder" style="display:none;">Ф</div>
+                        </div>
+                        <h3>Фарит</h3>
+                        <p>Меня зовут Фарит. Я мастер по компьютерам с 5-летним стажем: собираю игровые ПК, спасаю
+                            жёсткие диски после смерти и нахожу общий язык с любым устройством.</p>
+                    </div>
+                    <div class="team__member">
+                        <div class="team__photo">
+                            <img src="assets/игорь.jpg" alt="Игорь"
+                                onerror="this.style.display='none'; this.parentNode.querySelector('.photo-placeholder').style.display='flex'">
+                            <div class="photo-placeholder" style="display:none;">И</div>
+                        </div>
+                        <h3>Игорь</h3>
+                        <p>Меня зовут Игорь. Я мастер по сборке, ремонту и апгрейду компьютеров. Специализируюсь на
+                            игровых и кастомных ПК, уделяя особое внимание диагностике, охлаждению и аккуратному
+                            кабель-менеджменту. Подхожу к каждой работе так, будто делаю компьютер для себя: объясняю
+                            всё клиенту простым языком и не сдаюсь, пока проблема не будет решена полностью.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalServices">
+        <div class="modal">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <h2 class="section-title">Услуги и цены</h2>
+                <div class="info-block">
+                    <h3>Общие условия</h3>
+                    <ul>
+                        <li>Все цены указаны за выполнение работ. Стоимость комплектующих оплачивается дополнительно по
+                            фактической закупочной цене.</li>
+                        <li>Расходные материалы (термопаста, термопрокладки) включены в стоимость соответствующих услуг.
+                        </li>
+                        <li>Первичная диагностика — с выездом к клиенту. Остальные услуги — в мастерской.</li>
+                        <li>Срочный заказ: +10% к стоимости работ.</li>
+                        <li>Итоговая цена сложных работ согласовывается после осмотра устройства.</li>
+                    </ul>
+                </div>
+
+                <div class="price-grid">
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>Диагностика</h3>
+                        <ul class="price-list">
+                            <li><span>Первичная диагностика (выезд)</span><span>100 ₽</span><small>Бесплатно при заказе
+                                    ремонта</small></li>
+                            <li><span>Расширенная диагностика</span><span>договорная</span><small>Углублённое
+                                    тестирование</small></li>
+                        </ul>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>Замена комплектующих</h3>
+                        <div class="subcategory">
+                            <h4>1-я категория (простая) — 300 ₽</h4>
+                            <p>ОЗУ, видеокарта, HDD/SSD, вентилятор корпуса</p>
+                        </div>
+                        <div class="subcategory">
+                            <h4>2-я категория (средняя) — 500 ₽</h4>
+                            <p>Блок питания, кулер процессора, перекоммутация проводов</p>
+                        </div>
+                        <div class="subcategory">
+                            <h4>3-я категория (сложная) — 1 500 ₽</h4>
+                            <p>Материнская плата, полная пересборка</p>
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-computer"></i></div>
+                        <h3>Сборка ПК</h3>
+                        <ul class="price-list">
+                            <li><span>Сборка по нашему шаблону</span><span>1 500 ₽</span><small>Готовая конфигурация из
+                                    наличия</small></li>
+                            <li><span>Сборка по нашему проекту</span><span>2 000 – 10 000 ₽</span><small>Подбор,
+                                    закупка, сборка</small></li>
+                            <li><span>Сборка из комплектующих клиента</span><span>1 500 – 5 000 ₽</span><small>Только
+                                    сборка</small></li>
+                            <li><span>Сборка по конфигурации клиента с закупкой</span><span>2 000 – 5 000
+                                    ₽</span><small>Закупка + сборка</small></li>
+                        </ul>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-arrow-up-wide-short"></i></div>
+                        <h3>Модернизация (апгрейд)</h3>
+                        <ul class="price-list">
+                            <li><span>Апгрейд по рекомендации мастера</span><span>1 000 ₽ + монтаж</span><small>Монтаж:
+                                    1 500 – 5 000 ₽</small></li>
+                            <li><span>Апгрейд по желанию клиента</span><span>500 ₽ + монтаж</span><small>Монтаж: 1 500 –
+                                    5 000 ₽</small></li>
+                            <li><span>Апгрейд с выездом за комплектующими</span><span>500 ₽ +
+                                    монтаж</span><small>Монтаж: 1 500 – 5 000 ₽</small></li>
+                        </ul>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Программные услуги</h3>
+                        <ul class="price-list">
+                            <li><span>Установка Windows + драйверы</span><span>300 ₽</span></li>
+                            <li><span>Удаление вирусов и рекламного ПО</span><span>500 ₽</span></li>
+                        </ul>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-broom"></i></div>
+                        <h3>Профилактика и чистка</h3>
+                        <ul class="price-list">
+                            <li><span>Чистка от пыли</span><span>100 ₽</span><small>Продувка и очистка фильтров</small>
+                            </li>
+                            <li><span>Замена термопасты</span><span>150 ₽</span><small>Снятие СО и нанесение новой
+                                    термопасты</small></li>
+                            <li><span>Полное техническое обслуживание</span><span>500 ₽</span><small>Полная чистка и
+                                    замена термопрокладок</small></li>
+                        </ul>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card__icon"><i class="fa-solid fa-clock"></i></div>
+                        <h3>Дополнительные услуги</h3>
+                        <ul class="price-list">
+                            <li><span>Срочное выполнение заказа</span><span>+10% к стоимости работ</span></li>
+                            <li><span>Выезд мастера</span><span>договорная</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <h3>Гарантийные обязательства</h3>
+                    <ul>
+                        <li>На работы по замене компонентов — 30 дней.</li>
+                        <li>На сборку ПК — 90 дней.</li>
+                        <li>На профилактические работы гарантия не распространяется.</li>
+                        <li>На комплектующие действует гарантия производителя.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalContract">
+        <div class="modal">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <h2 class="section-title">Договор оказания услуг</h2>
+                <p>Ознакомьтесь с условиями сотрудничества. Документ можно скачать и распечатать.</p>
+                <button id="downloadContract" class="btn">Скачать договор (TXT)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalContacts">
+        <div class="modal">
+            <button class="modal__close">&times;</button>
+            <div class="modal__content">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contacts__grid">
+                    <div class="contacts__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <br>
+                        <span><a href="tel:+79936524077">+7 (993) 652-40-77</a></span>
+                    </div>
+                    <div class="contacts__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <br>
+                        <span><a href="tel:+79613676977">+7 (961) 367-69-77</a></span>
+                    </div>
+                    <div class="contacts__item">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span><a href="https://t.me/pc_maestro_admin" target="_blank">@pc_maestro_admin</a></span>
+                    </div>
+                    <div class="contacts__item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <br>
+                        <span>г. Челябинск, ул. Каслинская, 17</span>
+                    </div>
+                    <div class="contacts__item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>8:00-20:00 <br> С понедельника по пятницу</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PC MAESTRO. Все права защищены.</p>
+            <div class="socials">
+                <a href="https://vk.ru/club221955702" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
+                <a href="https://t.me/pc_maestro_admin" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.tiktok.com/@pcmaestro00?_r=1&_t=ZP-96O1lcAdK3j" aria-label="TikTok"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@pc_maestro1?si=buo5c-JpoLZaraSs"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
