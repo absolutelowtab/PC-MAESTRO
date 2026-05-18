@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC MAESTRO – ремонт и сборка ПК</title>
+    <title>PC MAESTRO - ремонт и сборка ПК</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -304,7 +304,39 @@
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div class="countdown-banner">
+            <div class="countdown-banner__content container">
+                <p class="countdown-banner__title">
+                    <i class="fa-solid fa-rocket countdown-banner__icon"></i>
+                    ОТКРЫТИЕ МАСТЕРСКОЙ 30 ИЮНЯ! <i>Запись уже доступна!</i>
+                </p>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="timer-item">
+                        <span class="timer-value" id="timerDays">00</span>
+                        <span class="timer-label">дней</span>
+                    </div>
+                    <div class="timer-item timer-item--divider">:</div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="timerHours">00</span>
+                        <span class="timer-label">часов</span>
+                    </div>
+                    <div class="timer-item timer-item--divider">:</div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="timerMinutes">00</span>
+                        <span class="timer-label">минут</span>
+                    </div>
+                    <div class="timer-item timer-item--divider">:</div>
+                    <div class="timer-item">
+                        <span class="timer-value" id="timerSeconds">00</span>
+                        <span class="timer-label">секунд</span>
+                    </div>
+                </div>
+                <p class="countdown-banner__subtitle" id="countdownMessage" style="display: none;">Мы уже работаем! Ждём
+                    вас.</p>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
             <p>&copy; 2026 PC MAESTRO. Все права защищены.</p>
             <div class="socials">
                 <a href="https://vk.ru/club221955702" aria-label="VK"><i class="fa-brands fa-vk"></i></a>
@@ -315,6 +347,7 @@
             </div>
         </div>
     </footer>
+
 
     <script src="script.js"></script>
 </body>
