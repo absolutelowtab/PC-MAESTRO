@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Мобильное меню
     const burger = document.getElementById('burgerBtn');
     const nav = document.getElementById('mainNav');
     if (burger && nav) {
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Модальные окна
     const modalTriggers = document.querySelectorAll('[data-modal]');
     const modals = document.querySelectorAll('.modal-overlay');
 
@@ -53,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Скачивание договора TXT (без изменений)
     const downloadContractBtn = document.getElementById('downloadContract');
     if (downloadContractBtn) {
         downloadContractBtn.addEventListener('click', () => {
@@ -71,4 +68,46 @@ document.addEventListener('DOMContentLoaded', () => {
             URL.revokeObjectURL(url);
         });
     }
+
+    
 });
+
+function startCountdown() {
+    const openDate = new Date('2026-06-30T00:00:00');
+    const timerDays = document.getElementById('timerDays');
+    const timerHours = document.getElementById('timerHours');
+    const timerMinutes = document.getElementById('timerMinutes');
+    const timerSeconds = document.getElementById('timerSeconds');
+    const countdownMessage = document.getElementById('countdownMessage');
+    const countdownTimer = document.getElementById('countdownTimer');
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = openDate.getTime() - now;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            if (countdownTimer) countdownTimer.style.display = 'none';
+            if (countdownMessage) {
+                countdownMessage.style.display = 'block';
+                countdownMessage.textContent = '🎉 МЫ ОТКРЫЛИСЬ! ЖДЁМ ВАС В МАСТЕРСКОЙ 🎉';
+            }
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if (timerDays) timerDays.textContent = days < 10 ? '0' + days : days;
+        if (timerHours) timerHours.textContent = hours < 10 ? '0' + hours : hours;
+        if (timerMinutes) timerMinutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        if (timerSeconds) timerSeconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+    }
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', startCountdown);
