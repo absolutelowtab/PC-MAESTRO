@@ -757,6 +757,35 @@ img {
     margin-top: 15px;
 }
 
+.request-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.request-subtitle {
+    text-align: center;
+    color: #b0c4de;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.google-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(43, 87, 211, 0.25);
+    overflow: hidden;
+}
+
+.google-form-container iframe {
+    border-radius: 10px;
+    background: #fff;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .countdown-banner__title {
         font-size: 1.8rem;
@@ -835,5 +864,14 @@ img {
 
     .step {
         max-width: 100%;
+    }
+
+    .google-form-container {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .google-form-container iframe {
+        height: 600px;
     }
 }
