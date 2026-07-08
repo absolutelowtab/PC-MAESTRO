@@ -20,7 +20,7 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#about" class="nav__link" data-modal="about">О нас</a></li>
                     <li class="nav__item"><a href="#services" class="nav__link" data-modal="services">Услуги</a></li>
-                    <li class="nav__item"><a href="#contract" class="nav__link" data-modal="contract">Договор</a></li>
+                    <li class="nav__item"><a href="#contract" class="nav__link" data-modal="contract">Документы</a></li>
                     <li class="nav__item"><a href="#contacts" class="nav__link" data-modal="contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -140,6 +140,12 @@
                             всё клиенту простым языком и не сдаюсь, пока проблема не будет решена полностью.</p>
                     </div>
                 </div>
+                <div class="workshop-photo-wrapper">
+                    <img src="assets/мастерская.JPG" alt="Фото мастерской PC MAESTRO" class="workshop-photo"
+                        onerror="this.style.display='none'; this.parentNode.classList.add('workshop-photo-placeholder')">
+                    <div class="workshop-placeholder-text" style="display: none;">Фото мастерской</div>
+                </div>
+                <p class="workshop-caption">Наша мастерская в Челябинске</p>
             </div>
         </div>
     </div>
@@ -154,9 +160,12 @@
                     <ul>
                         <li>Все цены указаны только за оказание услуг. </li>
                         <li>Стоимость комплектующих оплачивается дополнительно по фактической закупочной цене.</li>
-                        <li>Расходные материалы (термопаста, термопрокладки) включены в стоимость соответствующих услуг.</li>
-                        <li>Первичная диагностика может производится с выездом к клиенту. За выезд мастера цена договорная, в зависимости от удаленности.</li>
-                        <li>На остальные услуги выезд мастера не осуществляется, для их оказания компьютеры должны быть предоставлены в мастерскую, в том числе при расширенной диагностике. </li>
+                        <li>Расходные материалы (термопаста, термопрокладки) включены в стоимость соответствующих услуг.
+                        </li>
+                        <li>Первичная диагностика может производится с выездом к клиенту. За выезд мастера цена
+                            договорная, в зависимости от удаленности.</li>
+                        <li>На остальные услуги выезд мастера не осуществляется, для их оказания компьютеры должны быть
+                            предоставлены в мастерскую, в том числе при расширенной диагностике. </li>
                         <li>Срочное выполнение услуги: +10% к стоимости услуги.</li>
                         <li>Итоговая цена сложных работ согласовывается после осмотра устройства.</li>
                     </ul>
@@ -167,7 +176,8 @@
                         <div class="price-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                         <h3>Диагностика</h3>
                         <ul class="price-list">
-                            <li><span>Первичная диагностика</span><span>100 ₽ (без учета стоимости выезда мастера)</span><small>Бесплатно при заказе
+                            <li><span>Первичная диагностика</span><span>100 ₽ (без учета стоимости выезда
+                                    мастера)</span><small>Бесплатно при заказе
                                     ремонта</small></li>
                             <li><span>Расширенная диагностика</span><span>договорная</span><small>Углублённое
                                     тестирование</small></li>
@@ -261,15 +271,23 @@
     <div class="modal-overlay" id="modalContract">
         <div class="modal">
             <button class="modal__close">&times;</button>
-            <div class="modal__content" style="display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center;">
-                <h2 class="section-title">Договор возмездного оказания услуг</h2>
-                <p>Ознакомьтесь с условиями сотрудничества. Документ можно скачать и распечатать.</p>
+            <div class="modal__content"
+                style="display: flex; flex-direction: column; text-align: center; align-items: center; justify-content: center;">
+                <h2 class="section-title">Документы для сотрудничества</h2>
+                <p>Ознакомьтесь с условиями. Документы можно скачать и распечатать.</p>
                 <br>
-                <a href="assets/contract.pdf" download class="btn">Скачать договор (PDF)</a>
+                <a href="assets/contract.pdf" download class="btn" style="margin-bottom: 20px;">📄 Скачать договор
+                    (PDF)</a>
+                <a href="assets/recommendation.pdf" download class="btn"
+                    style="background: linear-gradient(135deg, #2B57D3, #1a3a8a);">📝 Скачать рекомендацию к ремонту
+                    (PDF)</a>
+                <small style="margin-top: 15px; color: #b0c4de;">Рекомендация к ремонту — документ для других сервисных
+                    центров после нашей диагностики.</small>
             </div>
         </div>
     </div>
 
+    <!-- Модальное окно "Контакты" -->
     <div class="modal-overlay" id="modalContacts">
         <div class="modal">
             <button class="modal__close">&times;</button>
@@ -297,7 +315,7 @@
                     </div>
                     <div class="contacts__item">
                         <i class="fa-solid fa-clock"></i>
-                        <span>16:00-22:00 <br> Без выходных</span>
+                        <span>12:00-22:00 <br> Без выходных</span>
                     </div>
                 </div>
             </div>
@@ -316,7 +334,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
